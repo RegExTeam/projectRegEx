@@ -48,9 +48,9 @@ def mysite():
         deck_html=""
         count = 0
         for deck in public_decks:
-                if (count < 3):
-                    deck_html = (deck_html + "<div class='decks' data-id='" + str(deck[1]) + "' style='background-color: #D5F9D5; border-radius:12px;'>" + str(deck[0]) + "</div>")
-                count = count + 1;
+                if (count < 6):
+                    deck_html = (deck_html + "<div class='decks' data-id='" + str(deck[1]) + "' style='background-color: #FFFFFF; border-radius:12px;'>" + str(deck[0]) + "</div>")
+                count = count + 1
 
     return render_template('landingPage.html', isLoggedIn=isLoggedIn, decks=deck_html)
 
@@ -337,11 +337,7 @@ def deleteCard():
         return goToEditDeck(deckname)
     else:
         return goToLibrary()
-
-###############################################################
-###############################################################
-########################HELP###################################
-
+        
 #route will only work for user first deck in there profile
 #It works though
 
